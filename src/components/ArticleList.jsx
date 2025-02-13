@@ -7,7 +7,8 @@ const ArticleList = (props) => {
          {articleArr.map((article) => {
             return (
                <div className="article-item" key={article.id}>
-                  {article.title}
+                  <h3>{article.title}</h3>
+                  <p>{article.text}</p>
                </div>
             );
          })}
