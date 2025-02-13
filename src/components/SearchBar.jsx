@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/searchBar.css";
 
 const SearchBar = ({ callback }) => {
    const [inputValue, setInputValue] = useState("");
@@ -9,6 +10,7 @@ const SearchBar = ({ callback }) => {
    return (
       <form className="searchBar" onSubmit={handleSubmit}>
          <input
+            autoFocus
             type="text"
             className="searchBarInput"
             value={inputValue}
@@ -16,6 +18,7 @@ const SearchBar = ({ callback }) => {
                setInputValue(e.target.value);
             }}
          />
+         <button>Search</button>
       </form>
    );
 };

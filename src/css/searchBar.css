@@ -1,0 +1,9 @@
+.searchBar {
+   display: flex;
+   max-width: 800px;
+   margin: 0 auto;
+}
+.searchBarInput {
+   padding: 10px;
+   flex: 1;
+}

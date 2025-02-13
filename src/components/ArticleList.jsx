@@ -1,9 +1,18 @@
 import React from "react";
-
-const ArticleList = ({ articleArr }) => {
-   return articleArr.map((article) => {
-      return <div key={article.id}>{article.title}</div>;
-   });
+import "../css/article.css";
+const ArticleList = (props) => {
+   const { articleArr } = props;
+   return (
+      <div className="article-container">
+         {articleArr.map((article) => {
+            return (
+               <div className="article-item" key={article.id}>
+                  {article.title}
+               </div>
+            );
+         })}
+      </div>
+   );
 };
 
 export default ArticleList;
